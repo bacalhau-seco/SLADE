@@ -58,8 +58,8 @@ jobs:
     - name: Upload
       uses: actions/upload-artifact@v4
       with:
-      name: slade3
-      path: build/slade.tar.gz
-      if-no-files-found: error
-      retention-days: 7
-      overwrite: true
+        name: slade3
+        path: build/slade.tar.gz
+        if-no-files-found: error
+        retention-days: 7
+        overwrite: true
