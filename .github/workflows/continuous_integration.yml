@@ -54,3 +54,12 @@ jobs:
       run: |
         export MAKEFLAGS=--keep-going
         cmake --build build --parallel 3
+        tar cfz slade.tar.gz slade
+    - name: Upload
+      uses: actions/upload-artifact@v4
+      with:
+      name: slade3
+      path: build/slade.tar.gz
+      if-no-files-found: error
+      retention-days: 7
+      overwrite: true
